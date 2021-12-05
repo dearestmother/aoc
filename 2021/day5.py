@@ -24,7 +24,7 @@ def part1(input):
         for line in input for i in [0,1]]
     data = np.array(data, int).reshape(-1,4)
 
-    hits = np.bincount(chart(data, diagonals=False).flatten())[2:].sum()
+    hits = np.count_nonzero(chart(data, diagonals=False) >= 2)
     
     print ("Part 1: {}".format(hits))
 
@@ -35,7 +35,7 @@ def part2(input):
         for line in input for i in [0,1]]
     data = np.array(data, int).reshape(-1,4)
 
-    hits = np.bincount(chart(data, diagonals=True).flatten())[2:].sum()
+    hits = np.count_nonzero(chart(data, diagonals=True) >= 2)
     
     print ("Part 1: {}".format(hits))
 
