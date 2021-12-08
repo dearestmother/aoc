@@ -43,7 +43,6 @@ if __name__ == "__main__":
     example = [16,1,2,0,4,2,7,1,2,14]
 
     #part1(example)
-   
     part1(list(map(int, puzzle.input_data.split(","))))
     #part2(example)
     part2(list(map(int, puzzle.input_data.split(","))))
