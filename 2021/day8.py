@@ -25,6 +25,13 @@ def decode_dictionary(inp):
     digits = {}
     five_len, six_len = [], []
 
+    ## 0: left from 6: and 9:
+    ## 2: left from 3: and 5:
+    ## 3: (Candidate - 1) -> 3 segments left
+    ## 5: (candidate - 4) -> 2 segments left
+    ## 6: (8 - candidate) intersect 1
+    ## 9: (Candidate - 4) -> 2 segments left
+    
     for digit in inp:
         if len(digit) == 2:
             digits["1"] = set(digit)
@@ -78,39 +85,6 @@ def part2(input):
         sum += int("".join(result))
     print ("Part 2: {}".format(sum))
 
-
-    #digits = ['','','','','','','','','']
-#
-    #for line in input:
-#
-    #    # Find the ones we know
-    #    values = line.split("|")[0].split(" ")
-    #    for value in values:
-    #        match len(value):
-    #            case 2:
-    #                digits[1] = value
-    #            case 3:
-    #                digits[3] = value
-    #            case 4:
-    #                digits[4] = value
-    #            case 7:
-    #                digits[8] = value
-    #    for value in values:
-    #        if len(value) == 6:
-    #            # 0, 6, 9
-    #            for
-#
-    ## 0: left from 6: and 9:
-    ## 2: left from 3: and 5:
-    ## 3: (Candidate - 1) -> 3 segments left
-    ## 5: (candidate - 4) -> 2 segments left
-    ## 6: (8 - candidate) intersect 1
-    ## 9: (Candidate - 4) -> 2 segments left
-    #part_two = 0
-    #for line in input:
-    #    p = process_line(line)
-    #    part_two += int("".join([str(x) for x in p]))
-    #
 
 
 if __name__ == "__main__":
