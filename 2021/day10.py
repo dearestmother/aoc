@@ -16,7 +16,7 @@ def part1(input):
                     matchFound = True
                     input[x] = input[x].replace(syntax, "")
 
-        print(input)
+        #print(input)
 
         #Remove all the leading chars. That way the first char in string is the first error
         for syntax in syntaxsets:
