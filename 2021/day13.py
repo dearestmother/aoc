@@ -34,7 +34,7 @@ class Grid:
                     if x == dot.x and y == dot.y:
                         has_dot = True
                         break
-                code += "#" if has_dot else "."
+                code += "#" if has_dot else " "
             code += "\n"
 
         return code
